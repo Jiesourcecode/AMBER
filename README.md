@@ -1,4 +1,4 @@
-# AMBER
+# AMBER (Adaptive Mobile web BrowsERing)
 
 AMBER is a project for improving the user experience of mobile web browser, 
 it provides a general and extensible framework for running experiments on moile heterogeneous multi-cores mobile platform.
