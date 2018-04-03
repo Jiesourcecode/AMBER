@@ -1,0 +1,104 @@
+	var tagBasic=["BasicClass","!DOCTYPE","html","title","body","h1","h2","h3","h4","h5","h6","p","br","hr","!--...--"];
+	var tagFormate=["FormateClass","acronym","abbr","address","b","bdi","big","blockquote","center","cite","code","del","dfn","em","font","i","ins","kbd","mark","meter","pre",
+	"progress","q","rp","rt","ruby","samp","s","small","strike","strong","sub","time","u","var","wbr"];
+	var tagFormInput=["FormInputClass","form","input","button","textarea","select","option","label","fieldset","legend","datalist","keygen","output"];
+	var tagFrame=["FrameClass","frame","frameset","noframes","iframe"];
+	var tagImage=["ImageClass","img","map","area","canvas","figcaption","figure"];
+	var tagVAudio=["VAudioClass","audio","source","track","video"];
+	var tagLink=["LinkClass","link","a","nav"];
+	var tagList=["ListClass","ol","li","dir","dl","dt","dd","menu","menuitem"];
+	var tagTable=["TableClass","table","caption","th","tr","td","thead","thead","tbody","tfoot","col","colgroup"];
+	var tagStyleSematic=["StyleSematicClass","style","div","span","header","footer","main","section","article","aside","details","dialog","summary"];
+	var tagMeta=["MetaClass","head","meta","base","basefont"];
+	var tagProgram=["ProgramClass","script","noscript","applet","embed","object","param"];
+	
+	var tagClass=[];
+	tagClass.push(tagBasic);
+	tagClass.push(tagFormate);
+	tagClass.push(tagFormInput);
+	tagClass.push(tagFrame);
+	tagClass.push(tagImage);
+	tagClass.push(tagVAudio);
+	tagClass.push(tagLink);
+	tagClass.push(tagList);
+	tagClass.push(tagTable);
+	tagClass.push(tagStyleSematic);
+	tagClass.push(tagMeta);
+	tagClass.push(tagProgram);
+
+	var tagInfo=[]
+	
+	tagClass.forEach(function(item,index,array){
+		var tmp=countting(item);
+		tagInfo.push(tmp);
+	});
+	
+	var tagInfo2=[];
+	for(i=0;i<tagInfo.length;i++){
+		tmp1=tagInfo[i];
+		for(m = 0;m < tmp1.length; m++){
+			tmp=[tmp1[m][0],tmp1[m][1]];
+			tagInfo2.push(tmp);
+		}
+	} 
+
+	var attrInfo=[];
+	for(i=0;i<1;i++){
+		tmp2 = countAttr(tagInfo2[i][0],tagInfo2[i][1]);
+		attrInfo.push(tmp2);
+	}
+		
+	/*var attrInfo2=[];
+	for(i=0;i < attrInfo.length;i++){
+		tmp1=attrInfo[i];
+		if(tmp1==0){
+			continue;
+		}
+		for(m = 0;m < tmp1.length; m++){
+			tmp=tmp1[m];
+			attrInfo2.push(tmp);
+		}
+	}  */
+	
+//	var tmp=["input","14"];
+	//var s = countAttr(tmp);
+
+
+function countting(tag){
+	var tag_count=[];
+	//static the total count of this kind tag 
+	var total=0;
+	for(i=0;i<tag.length;i++){
+		var tmp=[];
+		//formate tag,count; list count > 0 only
+		if((count = document.getElementsByTagName(tag[i]).length) == 0){
+			continue;
+		}
+		total += count;
+		tmp = [tag[i],count.toString()];
+		tag_count.push(tmp);
+	}
+	//first item is total
+	tag_count[0]=[tag[0],total];
+	return tag_count;
+}
+
+function countAttr(tag,num){
+	var attr_count=[];
+	var num1 = parseInt(num);
+	if(document.getElementsByTagName(tag)[0]!=null){
+		for(i = 0;i < num1; i++){
+			attr = document.getElementsByTagName(tag)[i].attributes;
+			for(j = 0;j < attr.length;j++){
+				//attr.nodeName;
+				attr_count.push(attr[j].nodeName);
+			}
+		}
+	}
+	else{
+		attr_count.push(0);
+	}
+	return attr_count;
+}
+
+

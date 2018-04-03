@@ -1,0 +1,82 @@
+			var countBasic=[];
+			var totalBasic=0;
+			for(i=0;i<tagBasic.length;i++){
+				tmp = document.getElementsByTagName(tagBasic[i]).length;
+				countBasic.push(tmp);
+			}
+			
+			var countFormate=[];
+			var totalFormate=[];
+			for(i=0;i<tagFormate.length;i++){
+				tmp = document.getElementsByTagName(tagFormate[i]).length;
+				countFormate.push(tmp);
+			}
+			
+			var countFormInput=[];
+			var totalFormInput=[];
+			for(i=0;i<tagFormInput.length;i++){
+				tmp = document.getElementsByTagName(tagFormInputi]).length;
+				countFormInput.push(tmp);
+			}
+			
+			var countFrame=[];
+			var totalFrame=[];
+			for(i=0;i<tagFrame.length;i++){
+				tmp = document.getElementsByTagName(tagFrame[i]).length;
+				countFrame.push(tmp);
+			}
+			
+			var countImage=[];
+			var totalImage=[];
+			for(i=0;i<tagImage.length;i++){
+				tmp = document.getElementsByTagName(tagImage[i]).length;
+				countImage.push(tmp);
+			}
+			
+			var countVAudio=[];
+			var totalVAudio=[];
+			for(i=0;i<tagVAudio.length;i++){
+				tmp = document.getElementsByTagName(tagVAudio[i]).length;
+				countVAudio.push(tmp);
+			}
+			
+			var countLink=[];
+			var totalLink=[];
+			for(i=0;i<tagLink.length;i++){
+				tmp = document.getElementsByTagName(tagLink[i]).length;
+				countLink.push(tmp);
+			}
+			
+			var countList=[];
+			var totalList=[];
+			for(i=0;i<tagList.length;i++){
+				tmp = document.getElementsByTagName(tagList[i]).length;
+				countList.push(tmp);
+			}
+			
+			var countTable=[];
+			var totalTable=[];
+			for(i=0;i<tagTable.length;i++){
+				tmp = document.getElementsByTagName(tagTable[i]).length;
+				countTable.push(tmp);
+			}
+			
+			var countStyleSematic=[];
+			for(i=0;i<tagStyleSematic.length;i++){
+				tmp = document.getElementsByTagName(tagStyleSematic[i]).length;
+				countStyleSematic.push(tmp);
+			}
+			
+			var countMeta=[];
+			var countMeta=[];
+			for(i=0;i<tagMeta.length;i++){
+				tmp = document.getElementsByTagName(tagMeta[i]).length;
+				countMeta.push(tmp);
+			}
+			
+			var countProgram=[];
+			var countProgram=[];
+			for(i=0;i<tagProgramlength;i++){
+				tmp = document.getElementsByTagName(tagProgram[i]).length;
+				countProgram.push(tmp);
+			}
