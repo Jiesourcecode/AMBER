@@ -28,7 +28,7 @@ Renderer running on the core 0(little) with 0.8Ghz under Our approach
 ![example image](asset/pic/onlittlecore.png)
 ![example image](asset/pic/afterscheduling.png)
 
-![example image](asset/pic/board.jpg)
+![example image](asset/pic/board.png)
 
 # License
 GPL.
