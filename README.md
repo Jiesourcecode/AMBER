@@ -20,5 +20,15 @@ BBC Feature values
 The scheuler get the extension predicted configuration and scheduler the render process to the specified core with certain 
 frequency.
 
+Regular 4G Network Condition.
+Renderer running on the core 5(big) with highest frequency under Interactive Governor
+![example image](asset/pic/interactive_core.png)
+![example image](asset/pic/interactive_freq.png)
+Renderer running on the core 0(little) with 0.8Ghz under Our approach
+![example image](asset/pic/onlittlecore.png)
+![example image](asset/pic/afterscheduling.png)
+
+![example image](asset/pic/board.png)
+
 # License
 GPL.
